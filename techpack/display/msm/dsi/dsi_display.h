@@ -752,4 +752,6 @@ int dsi_display_esd_irq_ctrl(struct dsi_display *display,
 
 struct dsi_display *get_main_display(void);
 
+int mi_get_disp_id(struct dsi_display *display);
+
 #endif /* _DSI_DISPLAY_H_ */
