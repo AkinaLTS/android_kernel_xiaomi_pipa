@@ -27,6 +27,10 @@ config QCOM_KGSL_IOMMU
 	bool
 	default y if QCOM_KGSL && (MSM_IOMMU || ARM_SMMU)
 
+config CORESIGHT_ADRENO
+	bool
+	default y if QCOM_KGSL=y && CORESIGHT=y
+
 config QCOM_KGSL_USE_SHMEM
 	bool "Enable using shmem for memory allocations"
 	depends on QCOM_KGSL
