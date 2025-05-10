@@ -1980,15 +1980,3 @@ KBUILD_CFLAGS  += $(call cc-disable-warning, enum-conversion)
 KBUILD_CFLAGS  += $(call cc-disable-warning, missing-prototypes)
 KBUILD_CFLAGS  += $(call cc-disable-warning, compare-distinct-pointer-types)
 KBUILD_CFLAGS  += $(call cc-disable-warning, unused-label)
-
-# =====================================================================
-# Custom KBUILD metadata definitions for inline and external builds
-# Author: Aryan (CuriousNom)
-# Description: Embed build user, host, compiler, linker, and last commit hash
-# =====================================================================
-
-KBUILD_BUILD_USER := aryan
-KBUILD_BUILD_HOST := curiousnom
-KBUILD_LAST_COMMIT := $(shell git rev-parse --short HEAD)
-KBUILD_COMPILER_STRING := Google AOSP Clang 20.0.0 +pgo +bolt +lto +mlgo
-KBUILD_LINKER_STRING := LLD 20.0.0

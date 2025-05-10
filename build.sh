@@ -54,6 +54,13 @@ fi
 echo "[clang --version]:"
 clang --version
 
+# Export variables
+export KBUILD_BUILD_USER="aryan"
+export KBUILD_BUILD_HOST="curiousnom"
+export KBUILD_LAST_COMMIT=${GIT_COMMIT_ID}
+export KBUILD_COMPILER_STRING="Google AOSP Clang 20.0.0 +pgo +bolt +lto +mlgo"
+export KBUILD_LINKER_STRING="LLD 20.0.0"
+
 echo "Cleaning..."
 rm -rf out/
 rm -rf error.log
