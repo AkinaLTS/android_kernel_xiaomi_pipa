@@ -123,8 +123,12 @@ sed -i 's/\/\/39 01 00 00 11 00 03 51 03 FF/39 01 00 00 11 00 03 51 03 FF/g' ${d
 
     # ------------- Building for MIUI/HOS -------------
     echo "Clearing [out/] and building for MIUI/HOS....."
+    make clean
+    make mrproper
+    echo "Clearing successfully. Building will be started in 5s."
+    sleep 5s
 
-    make $MAKE_ARGS pipa_Arkria_defconfig lxc.config
+    make $MAKE_ARGS pipa_Arkria_defconfig
 
 scripts/config --file out/.config \
     --set-str STATIC_USERMODEHELPER_PATH /system/bin/micd \
