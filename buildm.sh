@@ -44,8 +44,9 @@ echo "[clang --version]:"
 clang --version
 
 # Export variables
-export KBUILD_BUILD_USER="aryan"
-export KBUILD_BUILD_HOST="curiousnom"
+# Original Creater: Aryan@CuriousNom
+export KBUILD_BUILD_USER="Arkria"
+export KBUILD_BUILD_HOST="Builder"
 export KBUILD_LAST_COMMIT=${GIT_COMMIT_ID}
 export KBUILD_COMPILER_STRING="Google AOSP Clang 20.0.0 +pgo +bolt +lto +mlgo"
 export KBUILD_LINKER_STRING="LLD 20.0.0"
